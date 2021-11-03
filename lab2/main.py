@@ -3,11 +3,13 @@ def printNames(names):
     for name in names:
         print(name)
 
+
 names = ["martin", "alex", "gloria", "melman", "szeregowy"]
 
 print("--------------------")
 print("Zadanie 2a")
 printNames(names)
+
 
 # Zadanie 2b i
 def multiply(numbers):
@@ -15,6 +17,7 @@ def multiply(numbers):
     for i in numbers:
         result.append(numbers[i - 1] * 2)
     return result
+
 
 numbers1 = [1, 2, 3, 4, 5]
 copyOfNumbers1 = multiply(numbers1)
@@ -24,9 +27,11 @@ print("Zadanie 2b i")
 print(numbers1)
 print(copyOfNumbers1)
 
+
 # Zadanie 2b ii
 def multiply2(numbers):
     return [value * 2 for value in numbers]
+
 
 numbers2 = [1, 2, 3, 4, 5]
 copyOfNumbers2 = multiply2(numbers2)
@@ -40,6 +45,7 @@ print(copyOfNumbers2)
 # Zadanie 2b ii
 def multiply2(numbers):
     return [value * 2 for value in numbers]
+
 
 numbers3 = [1, 2, 3, 4, 5]
 copyOfNumbers3 = multiply2(numbers3)
@@ -58,6 +64,7 @@ def onlyEven(numbers):
             result.append(numbers[i - 1])
     return result
 
+
 numbers4 = range(10)
 copyOfNumbers4 = onlyEven(numbers4)
 
@@ -66,6 +73,7 @@ print("Zadanie 2c")
 print(numbers4)
 print(copyOfNumbers4)
 
+
 # Zadanie 2d
 def everySecondNumber(numbers):
     result = []
@@ -73,6 +81,7 @@ def everySecondNumber(numbers):
         if i % 2 == 0:
             result.append(numbers[i - 1])
     return result
+
 
 numbers5 = range(20)
 copyOfNumbers5 = everySecondNumber(numbers5)
