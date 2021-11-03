@@ -48,9 +48,9 @@ class Library:
         self._phone = phone
 
     def __str__(self) -> str:
-        return f'Library is located in {self._city} (zip code {self._zip_code}) \
-            on the street {self._street}. Open houers {self._open_hours}, \
-                phone number {self._phone}.'
+        return f'Library is located in {self._city} \
+            (zip code {self._zip_code}) on the street {self._street}. \
+                Open houers {self._open_hours}, phone number {self._phone}.'
 
 
 class Employee:
@@ -98,8 +98,8 @@ class Employee:
         return f'Employee data: \n- first name: {self._first_name}, \n- last \
             name: {self._last_name}, \n- hire date: {self._hire_date}, \n\
                 - birth date: {self._birth_date}, \n- city: {self._city}, \n- \
-                    street: {self._street}, \n- zip code: {self._zip_code}, \n- \
-                        phone: {self._phone},'
+                    street: {self._street}, \n- zip code: {self._zip_code}, \n\
+                        - phone: {self._phone},'
 
 
 class Book:
