@@ -27,8 +27,10 @@ def bool_isEven(a: int) -> bool:
 even = 10
 odd = 9
 print('Zadanie 3')
-print(f"Liczba parzysta {even}") if bool_isEven(10) else print(f"Liczba nieparzysta {even}")
-print(f"Liczba parzysta {odd}") if bool_isEven(9) else print(f"Liczba nieparzysta {odd}")
+print(f"Liczba parzysta {even}") if bool_isEven(10) else \
+    print(f"Liczba nieparzysta {even}")
+print(f"Liczba parzysta {odd}") if bool_isEven(9) else \
+    print(f"Liczba nieparzysta {odd}")
 print('--------------------------')
 
 
@@ -51,7 +53,8 @@ listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 print('Zadanie 5')
 print('List of numbers', listOfNumbers)
-print(f'A = 10 exist in list of numbers: {bool_checkNumber(listOfNumbers, 10)}')
+print(f'A = 10 exist in list of numbers: \
+    {bool_checkNumber(listOfNumbers, 10)}')
 print('--------------------------')
 
 
