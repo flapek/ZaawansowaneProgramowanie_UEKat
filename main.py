@@ -174,10 +174,9 @@ firma_spozywcza = FirmaSpożywcza("pan marchweka", "wrocław", "43-111", "222 22
 firma_spozywcza2= FirmaSpożywcza("pan truskawka", "katowice", "43-235", "333 333 333", "big")
 kurs = Kurs()
 kurs.id_kierowcy = 1
-kurs.odcinki = [  Odcinek("Warszawa", "Katowice", "124.2", firma_spozywcza, firma_spozywcza2) ]
+kurs.odcinki = [ Odcinek("Warszawa", "Katowice", "124.2", firma_spozywcza, firma_spozywcza2) ]
 kurs.vechicle = Pojazd("Seat", 100, 3, 10, 3.5)
 kurs.max_vechicle_weight = 13
 kurs.max_vechicle_height = 4
-
 
 print(kurs)
