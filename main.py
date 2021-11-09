@@ -166,7 +166,7 @@ class Kurs:
 
 
 class FirmaTransportowa(Firma):
-    def __init__ (self, name: str, city: str, post_code: str,
+    def __init__(self, name: str, city: str, post_code: str,
                          phone_number: str, company_size: str):
         super().__init__(name, city, post_code, phone_number, company_size)
 
