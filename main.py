@@ -176,6 +176,7 @@ class FirmaSpożywcza(Firma):
                          phone_number: str, company_size: str):
         super().__init__(name, city, post_code, phone_number, company_size)
 
+
 firma_transportowa = FirmaTransportowa("Trans", "Warszawa", "43-213", "111 111 111", "big")
 firma_spozywcza = FirmaSpożywcza("pan marchweka", "wrocław", "43-111", "222 222 222", "big")
 firma_spozywcza2= FirmaSpożywcza("pan truskawka", "katowice", "43-235", "333 333 333", "big")
