@@ -27,7 +27,7 @@ class Firma:
         self.__phone_number = phone_number
         self.__company_size = company_size
 
-    def __str__ (self)  -> str:
+    def __str__(self)  -> str:
         return f"Firma {self.__name}, położona w {self.__city} \
             {self.__post_code}, numer kontaktowy \
                 {self.__phone_number}. Wielokość \
@@ -55,7 +55,8 @@ class Odcinek:
     def from_company(self) -> Firma:
         return self.__from_company
 
-    def __init__(self, from_place: str, to_place: str, distance: float, to_company: Firma,
+    def __init__(self, from_place: str, to_place: str,
+                        distance: float, to_company: Firma,
                         from_company: Firma):
         self.__from_place = from_place
         self.__to_place = to_place
