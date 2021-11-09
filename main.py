@@ -172,9 +172,9 @@ class FirmaTransportowa(Firma):
 
 
 class FirmaSpożywcza(Firma):
-    def __init__ (self, name: str, city: str, post_code: str,
+    def __init__(self, name: str, city: str, post_code: str,
                          phone_number: str, company_size: str):
-        super().__init__( name, city, post_code, phone_number, company_size)
+        super().__init__(name, city, post_code, phone_number, company_size)
 
 firma_transportowa = FirmaTransportowa("Trans", "Warszawa", "43-213", "111 111 111", "big")
 firma_spozywcza = FirmaSpożywcza("pan marchweka", "wrocław", "43-111", "222 222 222", "big")
