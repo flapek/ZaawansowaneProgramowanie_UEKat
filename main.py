@@ -10,16 +10,17 @@ class Firma:
     @property
     def post_code(self) -> str:
         return self.__post_code
-        
+
     @property
     def phone_number(self) -> str:
         return self.__phone_number
-        
+
     @property
     def company_size(self) -> str:
         return self.__company_size
 
-    def __init__(self,  name: str, city: str, post_code: str, phone_number: str, company_size: str):
+    def __init__(self,  name: str, city: str, post_code: str,
+                        phone_number: str, company_size: str):
         self.__name = name
         self.__city = city
         self.__post_code = post_code
@@ -27,8 +28,10 @@ class Firma:
         self.__company_size = company_size
 
     def __str__ (self)  -> str:
-        return f"Firma {self.__name}, położona w {self.__city} {self.__post_code}, \
-            numer kontaktowy {self.__phone_number}. Wielokość firmy {self.__company_size}."
+        return f"Firma {self.__name}, położona w {self.__city} \
+            {self.__post_code}, numer kontaktowy \
+                {self.__phone_number}. Wielokość \
+                    firmy {self.__company_size}."
 
 
 class Odcinek:
