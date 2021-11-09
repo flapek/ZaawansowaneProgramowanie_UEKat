@@ -92,8 +92,8 @@ class Pojazd:
     def wysokosc_samochodu(self) -> float:
         return self.__wysokosc_samochodu
 
-    def __init__(self, marka: str, moc: int, ilosc_miejsc: int, ladownosc: float, 
-                        wysokosc_samochodu: float):
+    def __init__(self, marka: str, moc: int, ilosc_miejsc: int,
+                        ladownosc: float, wysokosc_samochodu: float):
         self.__marka = marka
         self.__moc = moc
         self.__ilosc_miejsc = ilosc_miejsc
@@ -161,16 +161,19 @@ class Kurs:
         result = ""
         for odcinek in self.__odcinki:
             result += f"{odcinek}"
-        return f"{result} {self.__id_kierowcy} {self.__vechicle} {self.__max_vechicle_weight}, {self.__max_vechicle_height}"
+        return f"{result} {self.__id_kierowcy} {self.__vechicle} \
+            {self.__max_vechicle_weight}, {self.__max_vechicle_height}"
 
 
 class FirmaTransportowa(Firma):
-    def __init__ (self, name: str, city: str, post_code: str, phone_number: str, company_size: str):
+    def __init__ (self, name: str, city: str, post_code: str,
+                         phone_number: str, company_size: str):
         super().__init__(name, city, post_code, phone_number, company_size)
 
 
 class FirmaSpożywcza(Firma):
-    def __init__ (self, name: str, city: str, post_code: str, phone_number: str, company_size: str):
+    def __init__ (self, name: str, city: str, post_code: str,
+                         phone_number: str, company_size: str):
         super().__init__( name, city, post_code, phone_number, company_size)
 
 firma_transportowa = FirmaTransportowa("Trans", "Warszawa", "43-213", "111 111 111", "big")
