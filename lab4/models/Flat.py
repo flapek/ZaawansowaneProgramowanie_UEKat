@@ -6,7 +6,9 @@ class Flat(Property):
     def floor(self) -> None:
         return self._floor
 
-    def __init__(self, area: int, rooms: int, price: float, address: str, floor: int):
+    def __init__(
+        self, area: int, rooms: int, price: float, address: str, floor: int
+    ):
         super().__init__(area, rooms, price, address)
         self._floor = floor
 

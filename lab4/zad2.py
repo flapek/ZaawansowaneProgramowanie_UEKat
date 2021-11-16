@@ -37,8 +37,12 @@ employee3 = Employee(
 student1 = Student("Artur", 50)
 student2 = Student("Grzegorz", 59)
 student3 = Student("Jacek", 100)
-library1 = Library("Katowice", "Słowackiego 100/5", "43-200", "9-17", "+48 222 222 222")
-library2 = Library("Warszawa", "Słowackiego 100/5", "43-891", "9-18", "+48 333 333 333")
+library1 = Library(
+    "Katowice", "Słowackiego 100/5", "43-200", "9-17", "+48 222 222 222"
+)
+library2 = Library(
+    "Warszawa", "Słowackiego 100/5", "43-891", "9-18", "+48 333 333 333"
+)
 book1 = Book(library1, "10.01.2018", "Krychowiak", "", 102)
 book2 = Book(library1, "10.04.2016", "Andrzej", "Błasik", 70)
 book3 = Book(library2, "10.04.2019", "Grzegorz", "Nowy", 102)

@@ -6,7 +6,9 @@ class House(Property):
     def fence(self) -> None:
         return self._fence
 
-    def __init__(self, area: int, rooms: int, price: float, address: str, fence: int):
+    def __init__(
+        self, area: int, rooms: int, price: float, address: str, fence: int
+    ):
         super().__init__(area, rooms, price, address)
         self._fence = fence
 
