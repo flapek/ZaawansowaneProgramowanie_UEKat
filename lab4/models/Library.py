@@ -20,7 +20,12 @@ class Library:
         return self._phone
 
     def __init__(
-        self, city: str, street: str, zip_code: str, open_hours: str, phone: str
+        self,
+        city: str,
+        street: str,
+        zip_code: str,
+        open_hours: str,
+        phone: str,
     ):
         self._city = city
         self._street = street

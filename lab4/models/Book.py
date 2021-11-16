@@ -1,3 +1,6 @@
+from models.Library import Library
+
+
 class Book:
     @property
     def library(self) -> None:
