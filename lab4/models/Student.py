@@ -15,4 +15,4 @@ class Student:
         return self._marks > 50
 
     def __str__(self) -> str:
-        return f'Student name: {self._name}. Student mark: {self._marks}%'
+        return f"Student name: {self._name}. Student mark: {self._marks}%"

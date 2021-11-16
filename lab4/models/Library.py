@@ -1,4 +1,3 @@
-
 class Library:
     @property
     def city(self) -> None:
@@ -20,8 +19,9 @@ class Library:
     def phone(self) -> None:
         return self._phone
 
-    def __init__(self, city: str, street: str, zip_code: str,
-                 open_hours: str, phone: str):
+    def __init__(
+        self, city: str, street: str, zip_code: str, open_hours: str, phone: str
+    ):
         self._city = city
         self._street = street
         self._zip_code = zip_code
@@ -29,6 +29,6 @@ class Library:
         self._phone = phone
 
     def __str__(self) -> str:
-        return f'Library is located in {self._city} \
+        return f"Library is located in {self._city} \
             (zip code {self._zip_code}) on the street {self._street}. \
-                Open houers {self._open_hours}, phone number {self._phone}.'
+                Open houers {self._open_hours}, phone number {self._phone}."

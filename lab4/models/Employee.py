@@ -27,9 +27,17 @@ class Employee:
     def phone(self) -> None:
         return self._phone
 
-    def __init__(self, first_name: str, last_name: str, hire_date: str,
-                 birth_date: str, city: str, street: str, zip_code: str,
-                 phone: str):
+    def __init__(
+        self,
+        first_name: str,
+        last_name: str,
+        hire_date: str,
+        birth_date: str,
+        city: str,
+        street: str,
+        zip_code: str,
+        phone: str,
+    ):
         self._first_name = first_name
         self._last_name = last_name
         self._hire_date = hire_date
@@ -40,8 +48,8 @@ class Employee:
         self._phone = phone
 
     def __str__(self) -> str:
-        return f'Employee data: \n- first name: {self._first_name}, \n- last \
+        return f"Employee data: \n- first name: {self._first_name}, \n- last \
             name: {self._last_name}, \n- hire date: {self._hire_date}, \n\
                 - birth date: {self._birth_date}, \n- city: {self._city}, \n- \
                     street: {self._street}, \n- zip code: {self._zip_code}, \n\
-                        - phone: {self._phone},'
+                        - phone: {self._phone},"
