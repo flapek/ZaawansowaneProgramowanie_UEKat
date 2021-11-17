@@ -6,7 +6,7 @@ import csv
 def parse(wrapper: TextIOWrapper) -> list:
     result = []
     reader = csv.reader(wrapper, delimiter=",")
+    next(reader)
     for row in reader:
         result.append(Movie(row[0], row[1], row[2]))
     return result
-

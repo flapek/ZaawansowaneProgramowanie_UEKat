@@ -17,9 +17,7 @@ class HelloWorld(Resource):
 
 class Movie_API(Resource):
     def get(self):
-        return to_json(
-            [movie.__dict__ for movie in parse(read_file("movies.csv"))]
-        )
+        return to_json(parse(read_file("movies.csv")))
 
 
 api.add_resource(HelloWorld, "/")

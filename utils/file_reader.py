@@ -1,8 +1,15 @@
 from io import TextIOWrapper
-
-PATH = "C:\\Users\\filap\\Documents\\GitHub\\ZaawansowaneProgramowanie_UEKat\\data\\"
+from pathlib import Path
+import os.path
 
 
 def read_file(filename: str) -> TextIOWrapper:
-    file = open(f"{PATH}{filename}", "r", encoding="UTF8", newline="\n")
+    path = Path(__file__).parent.parent
+    print(path)
+    file = open(
+        os.path.join(path, "data", filename),
+        "r",
+        encoding="UTF8",
+        newline="\n",
+    )
     return file
