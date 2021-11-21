@@ -4,7 +4,7 @@ from flask_restful import Resource, Api
 
 from utils.file_reader import read_file
 from utils.movie_extension import parse
-from utils.to_json import to_json
+from utils.json_extension import to_json, to_json_string
 
 app = Flask(__name__)
 api = Api(app)
@@ -17,7 +17,7 @@ class HelloWorld(Resource):
 
 class Movie_API(Resource):
     def get(self):
-        return to_json(parse(read_file("movies.csv")))
+        return to_json(to_json_string(parse(read_file("movies.csv"))))
 
 
 api.add_resource(HelloWorld, "/")
