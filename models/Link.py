@@ -11,7 +11,7 @@ class Link:
     def tmdbId(self):
         return self._tmdbId
 
-    def __init__(self, id: int, imdbId: float, tmdbId: float):
+    def __init__(self, id: int, imdbId: str, tmdbId: str):
         self._id = id
         self._imdbId = imdbId
         self._tmdbId = tmdbId
@@ -23,6 +23,6 @@ class Link:
     def __dict__(self):
         return {
             "id": self._id,
-            "imdbId": self._imdbId,
-            "tmdbId": self._tmdbId,
+            "imdbId": f"{self._imdbId}",
+            "tmdbId": f"{self._tmdbId}",
         }
