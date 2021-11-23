@@ -17,7 +17,8 @@ class Movie:
         self._genres = genres
 
     def __str__(self):
-        return f'"id": {self._id},"title": "{self._title}", "genres": "{self._genres}"'
+        return f'"id": {self._id},"title": "{self._title}", \
+            "genres": "{self._genres}"'
 
     def __dict__(self):
         return {
