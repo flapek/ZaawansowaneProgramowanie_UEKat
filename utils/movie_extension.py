@@ -1,6 +1,6 @@
+import csv
 from io import TextIOWrapper
 from models.Movie import Movie
-import csv
 
 
 def parse(wrapper: TextIOWrapper) -> list:
