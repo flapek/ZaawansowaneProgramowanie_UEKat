@@ -4,11 +4,9 @@ import os.path
 
 
 def read_file(filename: str) -> TextIOWrapper:
-    path = Path(__file__).parent.parent
-    file = open(
-        os.path.join(path, "data", filename),
+    return open(
+        os.path.join(Path(__file__).parent.parent, "data", filename),
         "r",
         encoding="UTF8",
         newline="\n",
     )
-    return file
