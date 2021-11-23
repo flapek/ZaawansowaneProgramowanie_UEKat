@@ -9,7 +9,6 @@ app = Flask(__name__)
 api = Api(app)
 
 
-
 api.add_resource(HelloWorldController, "/")
 api.add_resource(MovieController, "/movies")
 
