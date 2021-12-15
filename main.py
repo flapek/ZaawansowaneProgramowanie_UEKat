@@ -6,17 +6,31 @@ pytesseract.pytesseract.tesseract_cmd = (
 )
 
 
+def read_image(path: str):
+    return cv2.imread(path)
+
+
+def prepare_image(path: str):
+    img = cv2.cvtColor(read_image(path), cv2.COLOR_BGR2GRAY)
+    return cv2.adaptiveThreshold(
+        cv2.bilateralFilter(img, 9, 75, 75),
+        255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY,
+        31,
+        2,
+    )
+
+
 def read_text_from_image(path: str) -> str:
-    img_cv = cv2.imread(path)
-    img_rgb = cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB)
-    return pytesseract.image_to_string(img_rgb)
+    return pytesseract.image_to_string(
+        prepare_image(path),
+    )
 
 
 def show_texts(paths):
     [
-        print(
-            "-------------------------------\n" + read_text_from_image(path)
-        )
+        print("-------------------------------\n" + read_text_from_image(path))
         for path in paths
     ]
 
