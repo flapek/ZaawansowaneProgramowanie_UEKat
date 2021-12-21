@@ -1,6 +1,3 @@
-from models.Budynek import Budynek
-
-
 class Zamownienie:
     @property
     def id(self) -> int:
