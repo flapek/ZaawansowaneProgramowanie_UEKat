@@ -23,7 +23,7 @@ class Detector:
         if str(self._args["GPU"]) == "true":
             print("true")
             self._face_model.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-            self._face_model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+            self._face_model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA_FP16)
 
         if self._args["output"] is not None and image_path is None:
             self._writer = cv2.VideoWriter(
