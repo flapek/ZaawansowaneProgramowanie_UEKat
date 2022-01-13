@@ -22,8 +22,8 @@ class Detector:
 
         if str(self._args["GPU"]) == "true":
             print("true")
-            self._face_model.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-            self._face_model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA_FP16)
+            self._face_model.setPreferableBackend(cv2.dnn.DNN_BACKEND_VKCOM)
+            self._face_model.setPreferableTarget(cv2.dnn.DNN_TARGET_VULKAN)
 
         if self._args["output"] is not None and image_path is None:
             self._writer = cv2.VideoWriter(
@@ -46,10 +46,12 @@ class Detector:
         self._img = cv2.imread(imgName)
         (self._height, self._width) = self._img.shape[:2]
 
+        fps = FPS().start()
         self._processFrame()
         if output_path is not None:
             cv2.imwrite(output_path, self._img)
-
+        fps.stop()
+        print("Elapsed time: {:.2f}".format(fps.elapsed()))
         cv2.imshow("Output", self._img)
         cv2.waitKey(0)
 
