@@ -51,6 +51,7 @@ class Detector:
         if output_path is not None:
             cv2.imwrite(output_path, self._img)
         fps.stop()
+        self._addText()
         print("Elapsed time: {:.2f}".format(fps.elapsed()))
         cv2.imshow("Output", self._img)
         cv2.waitKey(0)
@@ -67,6 +68,7 @@ class Detector:
 
         while sucess:
             self._processFrame()
+            self._addText()
             self._save()
             cv2.imshow("Output", self._img)
 
@@ -94,6 +96,7 @@ class Detector:
         while True:
             check, self._img = video.read()
             self._processFrame()
+            self._addText()
             self._save()
             cv2.imshow("Output", self._img)
             if cv2.waitKey(1) & 0xFF == ord("q"):
@@ -116,7 +119,7 @@ class Detector:
 
         self._face_model.setInput(blob)
         prediction = self._face_model.forward()
-
+        self._prediction_people = 0
         for i in range(0, prediction.shape[2]):
             if prediction[0, 0, i, 2] > 0.5:
                 bbox = prediction[0, 0, i, 3:7] * np.array(
@@ -126,7 +129,20 @@ class Detector:
                 cv2.rectangle(
                     self._img, (xmin, ymin), (xmax, ymax), (0, 0, 255), 2
                 )
+                self._prediction_people = self._prediction_people + 1
 
     def _save(self):
         if self._writer is not None:
             self._writer.write(self._img)
+
+    def _addText(self):
+        cv2.putText(
+            self._img,
+            f"People count: {self._prediction_people}",
+            (10, self._height - 100),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            1,
+            255,
+            5,
+            2,
+        )
