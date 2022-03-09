@@ -19,7 +19,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pycodestyle
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          cs ./services
+          foreach folder (api crawler scraper)
+            cd $folder
+            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            cd
+          end
       - name: Check style with pycodestyle
         run: |
           pycodestyle --show-pep8 .
