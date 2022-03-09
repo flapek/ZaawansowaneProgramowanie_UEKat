@@ -19,7 +19,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pycodestyle
-          cs ./services
+          cd ./services
           foreach folder (api crawler scraper)
             cd $folder
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
